@@ -1,7 +1,7 @@
 # 🛡️ LLM Evaluation & Guardrails Dashboard
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/AdamsCode1/llm-evals-guardrails-dashboard/main/docs/dashboard-screenshot.png" alt="Guardrails Dashboard" width="800">
+  <img src="https://raw.githubusercontent.com/AdamsCode1/llm-evals-guardrails-dashboard/main/docs/dashboard-screenshot.png" alt="Guardrails Dashboard Screenshot" width="800">
 </p>
 
 <p align="center">
@@ -64,7 +64,7 @@ curl -fsSL https://ollama.ai/install.sh | sh
 ollama pull llama3
 
 # Verify setup
-ollama run llama3 "Hello world"
+ollama run llama3 \"Hello world\"
 ```
 
 ### **Installation & Usage**
@@ -87,12 +87,13 @@ python3 dashboard.py
 # → Open http://localhost:8080
 ```
 
-### **Sample Evaluation Results**
-The dashboard shows real evaluation data:
-- **10 total evaluations** across 2 runs
+### **Live Dashboard**
+The screenshot above shows the dashboard displaying real evaluation data:
+- **2 evaluation runs** completed successfully
+- **10 total evaluations** across different prompts
 - **100% accuracy rate** (all prompts matched expected patterns)
-- **4.6s average latency** (local inference performance)
-- **30% violation rate** (3/10 prompts exceeded policy thresholds)
+- **4.6s average latency** (typical for local Ollama inference)
+- **30% violation rate** (demonstrates safety monitoring in action)
 
 ---
 
@@ -226,11 +227,11 @@ python -m evals.cli run --model llama3 --prompts prompts.csv
 ### **Custom Policy**
 ```json
 {
-  "max_latency_ms": 5000,
-  "require_accuracy": true,
-  "enable_toxicity": true,
-  "toxicity_threshold": 0.3,
-  "enable_pii": true
+  \"max_latency_ms\": 5000,
+  \"require_accuracy\": true,
+  \"enable_toxicity\": true,
+  \"toxicity_threshold\": 0.3,
+  \"enable_pii\": true
 }
 ```
 
@@ -307,15 +308,17 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 - **Live Demo**: [Dashboard Screenshot](#-project-overview)
 - **Documentation**: [CLI README](llm-evals-cli/README.md)
+- **Technical Details**: [Engineering Guide](docs/ENGINEERING.md)
+- **Metrics Framework**: [Evaluation Metrics](docs/METRICS.md)
 - **Issues**: [GitHub Issues](https://github.com/AdamsCode1/llm-evals-guardrails-dashboard/issues)
 - **Ollama**: [https://ollama.ai/](https://ollama.ai/)
 
 ---
 
-<p align="center">
+<p align=\"center\">
   <strong>Built with ❤️ for production LLM safety and monitoring</strong>
 </p>
 
-<p align="center">
+<p align=\"center\">
   No external APIs • No subscription costs • Local-first architecture
 </p>
