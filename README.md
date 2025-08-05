@@ -1,7 +1,7 @@
 # 🛡️ LLM Evaluation & Guardrails Dashboard
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/AdamsCode1/llm-evals-guardrails-dashboard/main/docs/dashboard-screenshot.png" alt="Guardrails Dashboard Screenshot" width="800">
+  <img src="https://github.com/AdamsCode1/llm-evals-guardrails-dashboard/blob/main/docs/dashboard-screenshot.png" alt="Guardrails Dashboard Screenshot" width="800">
 </p>
 
 <p align="center">
