@@ -58,6 +58,8 @@ make install-safety
 make install-all
 ```
 
+**Note**: The tool works with just the core dependencies! Toxicity and PII detection are optional features that gracefully degrade to `null` values if unavailable.
+
 ## Quick Start
 
 1. **Setup Ollama:**
@@ -205,47 +207,6 @@ class BaseProvider(Protocol):
 4. **Safety**: Toxicity and PII detection
 5. **Policy**: Evaluate against thresholds
 6. **Reporting**: Generate multiple output formats
-
-## Limitations
-
-- **Ollama only**: Only supports local Ollama provider (by design)
-- **CPU inference**: Safety models run on CPU for compatibility
-- **Regex accuracy**: Simple pattern matching for validation
-- **English only**: PII detection optimized for English text
-
-## Troubleshooting
-
-### "Ollama is not available"
-```bash
-# Check if Ollama is running
-ollama list
-
-# Start Ollama service
-ollama serve
-
-# Pull a model
-ollama pull llama3
-```
-
-### "Detoxify not available"
-```bash
-pip install detoxify torch --index-url https://download.pytorch.org/whl/cpu
-```
-
-### "Presidio not available"
-```bash
-# Try installing with conda instead of pip
-conda install -c conda-forge spacy
-conda install -c conda-forge presidio-analyzer presidio-anonymizer
-
-# Or install system dependencies first (macOS)
-brew install cmake rust
-pip install presidio-analyzer presidio-anonymizer spacy
-python -m spacy download en_core_web_sm
-
-# Or skip PII detection entirely (tool works without it)
-# Just use: make install
-```
 
 ## License
 
