@@ -1,0 +1,7 @@
+{
+  "max_latency_ms": 2000,
+  "require_accuracy": true,
+  "enable_toxicity": true,
+  "toxicity_threshold": 0.5,
+  "enable_pii": true
+}

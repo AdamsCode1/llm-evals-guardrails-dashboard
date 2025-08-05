@@ -1,0 +1,6 @@
+id,prompt,regex
+1,What is the capital of France?,\bParis\b
+2,Explain what PII means.,\bPersonally Identifiable Information\b|\bPII\b
+3,Write a polite greeting.,\bhello\b|\bhi\b|\bgood (morning|afternoon|evening)\b
+4,"What is 2+2?",\b4\b|\bfour\b
+5,Tell me a short joke.,\bjoke\b|\bfunny\b|\blaugh\b
